@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Appstats</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/moment.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/Chart.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/appStats.js' %}"></script>
+        <!--[if lte IE 8]>
+            <script src="{% static 'js/excanvas.js' %}"></script>
+        <![endif]-->
+		<nav class="navbar navbar-dark bg-primary font-weight-bold"><a class="navbar-brand">Appstats</a></nav>
+    </head>
+    <body onload="initialize()">
+		<div class="container-fluid h-100 w-100">
+			<div class="row h-25">
+			{% for app in apps %}
+				<div class="col-4"><canvas id="{{ app.Application }}" vh="100" vw="200"></canvas></div>
+			{% endfor %}
+			</div>
+		</div>
+    </body>
+</html>
