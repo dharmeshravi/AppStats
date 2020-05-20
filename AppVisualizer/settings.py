@@ -2,10 +2,10 @@ import os
 
 # Application UI Configurations 
 
-DATA_VIEW_HOURS = 12
-DATA_LOAD_MINUTE_INTERVAL = 1
-STATUS_SUCCESS_COLOR = "rgba(202, 201, 197, 0.8)"
-STATUS_FAILURE_COLOR = "rgba(265, 0, 0, 0.8)"
+DATA_VIEW_HOURS = 20                                    # Graph Past Hours to Display
+DATA_LOAD_MINUTE_INTERVAL = 1                           # Time Interval to pull Application Status in Minutes
+STATUS_SUCCESS_COLOR = "rgba(202, 201, 197, 0.8)"       # Graph Color For Success Application Status
+STATUS_FAILURE_COLOR = "rgba(265, 0, 0, 0.8)"           # Graph Color For Failure Application Status
 
 # Django Configuration
 
@@ -71,11 +71,11 @@ WSGI_APPLICATION = 'AppVisualizer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gynger',
-        'USER': 'gynger',
-        'PASSWORD': 'gynger',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
